@@ -269,7 +269,8 @@ function removeArtist(array, index) {
 removeArtist(artists, 0);
 
 /**
-/* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
+/* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array.
+Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
 
 For example, you could add the following information: 
 id: 20,
@@ -281,12 +282,14 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(array, id, name, years, genre, nationality, bio){
+  let addArtistArray = [...array];
+  addArtistArray.push(id, name, years, genre, nationality, bio);
+  return addArtistArray;
   }
 
+artistsPlusMe = addArtist(artists, 20, 'Austin McCollom', '1996-', 'Web Design', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra tincidunt nisl sit amet finibus. Ut faucibus mi finibus odio ultricies vehicula. Cras mi nibh, volutpat vel est sit amet, rutrum scelerisque arcu.');
+console.log(artistsPlusMe);
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
